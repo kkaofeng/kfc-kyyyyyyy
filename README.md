@@ -130,7 +130,7 @@ input[type="checkbox"]{
       </div>
       <div class="content">
          <div class="title">
-            ![2w2otnhwuck11](https://user-images.githubusercontent.com/107403546/176946830-42c5e8b6-5f19-4d59-bae5-2701c44fb23e.gif)
+            <img src="2w2otnhwuck11.gif">
          </div>
 
          <p>
