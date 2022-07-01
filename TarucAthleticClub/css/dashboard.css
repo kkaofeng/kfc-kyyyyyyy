@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap');
+
+html{
+    font-family: 'STIX Two Text',sans-serif;
+    background: url("./picture/admin_bg.jpg")  center/cover no-repeat fixed;
+    height: 100vh;
+}
+
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    top: 0;
+    left: 78px;
+    transition: all 0.5s ease;
+    
+}
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+section {
+    position: relative;
+    top: 200px;
+    width: calc(100% - 88px);
+    left: 88px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ section {
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+}
+
+#column{
+    font-size: 30px; 
+    border: 2px solid #1acc99;
+    border-radius: 10px;
+}

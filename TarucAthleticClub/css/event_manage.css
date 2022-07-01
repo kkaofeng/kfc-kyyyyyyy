@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap');
+
+.home_content{
+    position: relative;
+    height: 100%;
+    width: calc(100% - 78px);
+    top: 0;
+    left: 78px;
+    transition: all 0.5s ease;
+
+}
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+    position: relative;
+
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+#container{
+    position: relative;
+    left: 88px;
+    width: calc(100% - 88px);
+    height: 93vh;
+    transition: all 0.5s ease;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.sidebar.active ~ #container{
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+
+}
+
+.table {
+    position: relative;
+    top: 100px;
+    height: 100%;
+    width: calc(100% - 88px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ table {
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    margin-top: -12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+.box-content{
+    width:300px;
+    height: 550px;
+    background-color: white;
+    opacity: 1;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    font-size: 30px;
+    padding: 30px;
+}
+
+#content{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.pop{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    width: auto;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid black;
+} 
+
+#text{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: 0;
+    border-bottom: 1px solid #1acc99;
+    color: black;
+}
+
+#button{
+    padding: 7px;
+    width: 30%;
+    height: 40px;
+    font-size: 17px;
+    color: white;
+    background-color: #1acc99;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 10px auto;
+}
+
+#button:hover{
+    color: black;
+    background: white;
+    border: 1px solid #1acc99;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 28px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

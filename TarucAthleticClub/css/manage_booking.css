@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap');
+
+.home_content{
+    position: relative;
+    height: 100%;
+    width: calc(100% - 78px);
+    top: 0;
+    left: 78px;
+    transition: all 0.5s ease;
+}
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin: 12px;
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+table {
+    position: relative;
+    width: calc(100% - 88px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ table {
+    position: relative;
+    width: calc(100% - 250px);
+}
+
+#container{
+    position: relative;
+    left: 88px;
+    width: calc(100% - 88px);
+    height: 93vh;
+    transition: all 0.5s ease;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.sidebar.active ~ #container{
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+    
+}

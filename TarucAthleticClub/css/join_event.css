@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'STIX Two Text',sans-serif;
+    background:url("./picture/join_event_bg.PNG")  center/cover no-repeat fixed;
+    color: white;
+    height: 80vh;
+    align-items: center;
+}
+
+#main{
+    margin:50px auto;
+    width: 80%;
+    height: 90vh;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 40px white;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2.5;
+    color: white;
+    text-shadow: 2px 2px 5px #1acc99;
+    padding: 50px;
+    text-align: center;
+}
+
+#content{
+    text-align: left;
+    width: 100%;
+    margin: auto;
+}
+
+#text{
+    width: auto;
+    height: 25px;
+    font-size: 15px;
+}
+
+#join{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#button {
+    width: 80px;
+    font-weight: bold;
+    margin: auto;
+    text-align:center;
+    border:thick double;
+    text-decoration: none;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    text-shadow: none;
+}
+
+#button:hover {
+    background:rgb(255, 255, 255) ;
+    color:rgb(0, 0, 0);
+}
