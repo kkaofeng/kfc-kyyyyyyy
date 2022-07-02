@@ -106,9 +106,7 @@ input[type="checkbox"]{
          <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">Feedback</a></li>
          </ul>
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;z-index:1;">
       </div>
