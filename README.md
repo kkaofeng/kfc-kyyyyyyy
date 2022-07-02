@@ -16,7 +16,7 @@
 }
 		   
 img{
-  width: 30px;
+  width: 100px;
 }
 		   
 .wrapper{
