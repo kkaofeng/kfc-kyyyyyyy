@@ -14,6 +14,11 @@
   font-family: 'Poppins', sans-serif;
   max-height: 100vh;
 }
+		   
+img{
+  width: 30px;
+}
+		   
 .wrapper{
   position: fixed;
   top: 0;
