@@ -1,4 +1,4 @@
-<html lang="en">
+[<html lang="en">
  
 <head>
 
@@ -43,6 +43,7 @@ li {
         margin-left: 990px;
         margin-top: -540px;
     }
+	
 .main-title {
     font-size: 24px;
     line-height: 28px;
@@ -364,7 +365,7 @@ header {
 	</div>
 	<a href="#0" class="modal-close">Close</a>
 </div>
-<div class="cd-transition-layer visible opening"> 
+<div class="cd-transition-layer"> 
 	<div class="bg-layer"></div>
 </div><!-- Ink Transition -->
 
@@ -563,7 +564,6 @@ smokeeffect()
             $(this).toggleClass('modal-close');
     });
  
- 
      
 }); // document load end 
 
@@ -576,3 +576,4 @@ smokeeffect()
     </div>  
     </body>
 </html>
+](url)
