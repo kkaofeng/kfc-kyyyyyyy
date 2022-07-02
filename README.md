@@ -2,36 +2,27 @@
  
 <head>
 
-<title>Adil website template</title>
- 
+<title>Ky</title>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
  
 <style>
-     
 body {
     font-family: 'Roboto Condensed', sans-serif;  
     overflow: hidden;
     margin: 0;
     padding: 0;
-   
 }
-
 
 .nav-up {
     top: -40px;
 }
 
-
 li {
     list-style: none;
 }
- 
- 
-/*------------------------ 2 Home ------------------------*/
 
 .main {
-    background: url(ban.jpg) no-repeat;
     background-size: cover;
     display: table;
     width: 100%;
