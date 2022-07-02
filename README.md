@@ -38,14 +38,14 @@
   line-height: 50px;
   border-radius: 50%;
   font-size: 20px;
-  color: #fff;
+  color: black;
   cursor: pointer;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
   /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
   transition: all 0.3s ease-in-out;
 }
 #active:checked ~ .menu-btn{
-  background: #fff;
+  background: black;
   color: #4158d0;
 }
 #active:checked ~ .menu-btn i:before{
