@@ -18,8 +18,6 @@
 img{
   width: 300px;
   position:absolute;
-  right: 30px;
-  bottom: 0px;
 }
 		   
 .wrapper{
