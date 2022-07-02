@@ -134,7 +134,7 @@ input[type="checkbox"]{
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Feedback</a></li>
          </ul>
-	 <img src="black-cat.gif">
+	 <img src="black-cat.gif" style="background:black;">
       </div>
       <div class="content">
          <div class="title">
