@@ -18,6 +18,8 @@
 img{
   width: 300px;
   position:absolute;
+  right:0;
+  bottom:0;
 }
 		   
 .wrapper{
@@ -132,6 +134,7 @@ input[type="checkbox"]{
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Feedback</a></li>
          </ul>
+	 <img src="black-cat.gif">
       </div>
       <div class="content">
          <div class="title">
