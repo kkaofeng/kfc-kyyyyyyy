@@ -1,579 +1,141 @@
-<html lang="en">
- 
-<head>
-
-<title>Ky</title>
-<link rel="stylesheet" href="css/bootstrap.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
- 
-<style>
-body {
-    font-family: 'Roboto Condensed', sans-serif;  
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Fullscreen Overlay Navigation | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	   
+	   <style>
+		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-
-.nav-up {
-    top: -40px;
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
 }
-
-li {
-    list-style: none;
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
 }
-
-.main {
-    background-size: cover;
-    display: table;
-    width: 100%;
-    position: relative;
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
 }
-
-.main:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: -1;
-    opacity: .85;
-    position: absolute;
-     
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
 }
-    .nav-icon{
-        margin-left: 990px;
-        margin-top: -540px;
-    }
-	
-.main-title {
-    font-size: 24px;
-    line-height: 28px;
-    color: #fff;
-    font-weight: 400;
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
 }
-
-.hello {
-    color: #fff;
-    line-height: 51px;
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
 }
-
-.main-content {
-    padding: 0 60px;
-    vertical-align: middle;
-    display: table-cell;
-    height: 100%;
-    width: 100%;
+.wrapper ul li{
+  margin: 15px 0;
 }
-
-    .logo a{
-        color: orange;
-        margin-left: 30px;         
-        border: 1px solid white;
-        background: white;
-        font-size: 30px;
-    }
-  
-    .logo a:hover{
-        text-decoration: none;
-    }
-
-/*------------------------ 2.1 Full Menu ------------------------*/
-
-.full-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    opacity: 0;
-    visibility: hidden;   
-    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
 }
-
-/* Full Menu */
-
-.full-menu .modal-close {
-    /* 'X' icon */
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    padding: 50px;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background:rgba(0, 0, 0, 0.3) url(cd-icon-close.svg)no-repeat center center;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;     
-    transform: scale(0);
-    visibility 0s 0.3s, opacity 0.3s 0s;
-     
-    transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
 }
-
-.no-touch .full-menu .modal-close:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
 }
-
-.full-menu.visible {
-    background-size: 100%;
-    opacity: 1;
-    visibility: visible;   
-    transition: opacity 0.7s, visibility 0s;
+.wrapper ul li a:hover{
+  color: #4158d0;
 }
-
-.full-menu.visible .fullmenu-content {
-    -webkit-overflow-scrolling: touch;
+input[type="checkbox"]{
+  display: none;
 }
-
-.full-menu.visible .modal-close {
-    visibility: visible;
-    opacity: 1;    
-    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;     
-    transform: scale(1);
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
 }
-
-@media only screen and (min-width: 1100px) {
-    .full-menu .fullmenu-content {
-        padding: 6em 5%;
-    }
-    .full-menu .modal-close {
-        height: 60px;
-        width: 60px;
-    }
-    .full-menu p {
-        font-size: 25px;
-    }
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
 }
-
-.cd-transition-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
+.content p{
+  font-size: 35px;
+  font-weight: 600;
 }
-
-.cd-transition-layer .bg-layer {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateY(-50%) translateX(-2%);   
-    transform: translateY(-50%) translateX(-2%);     
-    height: 100%;
-    /* our sprite is composed of 25 frames */
-    width: 2500%;
-    background: url(ink.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
-.cd-transition-layer.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cd-transition-layer.opening .bg-layer {     
-    animation: cd-sequence 1.0s steps(24);     
-    animation-fill-mode: forwards;
-}
-
-.cd-transition-layer.closing .bg-layer {     
-    animation: cd-sequence-reverse 1.0s steps(24);    
-    animation-fill-mode: forwards;
-}
-
-.no-cssanimations .cd-transition-layer {
-    display: none;
-}
-
- 
-@keyframes cd-sequence {
-    0% {
-        transform: translateY(-50%) translateX(-2%);
-    }
-    100% {        
-        transform: translateY(-50%) translateX(-98%);
-    }
-}
-
-    
-    
-  
-@keyframes cd-sequence-reverse {
-    0% {
-         
-        transform: translateY(-50%) translateX(-98%);
-    }
-    100% {
-         
-        transform: translateY(-50%) translateX(-2%);
-    }
-}
-
-
-/*------------------------ 2.2 Header ------------------------*/
-
-.full-menu .fullmenu-content {
-    height: 100%;
-    width: 100%;
-    display: table;
-}
-
-.page-menu {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.page-menu li {
-    line-height: 50px;
-    margin-left: -25px;
-}
-
-.page-menu li:last-child {
-    line-height: 90px;
-}
-
-.page-menu li a {
-    color: #fff;
-    font-size: 26px;
-    position: relative;
-    font-weight: 500;
-     
-}
-
-.social img {
-    width: 15px;
-}
-
-.main .social {
-    margin-top: 30px;
-}
-
-.social a {
-    margin-right: 20px;
-}
-
-.social a:hover img {
-    opacity: .6;
-    transition: all ease 0.3s;
-}
-
-.social a:last-child {
-    margin-right: 0px;
-}
-
- 
- 
-
-header {
-    position: fixed;
-    padding: 30px;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-
-.nav-icon {
-    width: 23px;
-    height: 18px;
-    position: relative;    
-    transform: rotate(0deg);     
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    margin-top: 7px;
-}
-
-.nav-icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #fff;
-    opacity: 1;    
-    transform: rotate(0deg);   
-    transition: .25s ease-in-out;
-}
-
-.nav-icon span:nth-child(1) {
-    top: 0px;     
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(2) {
-    top: 6px;    
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(3) {
-    top: 12px;     
-    transform-origin: left center;
-    width: 60%;
-    right: 0 !important;
-}
-
-.nav-icon:hover span:nth-child(3) {
-    width: 100%;
-}
-
-
-
-     
-</style>
-</head>
-
-<body>
-    
- 
-<header>
-	<div class="logo float-left">
-		<a href="">MODERN</a>
-	</div> 
-	<div class="nav-icon float-right">
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
-</header>
-
-<!-- Full Menu -->
-<div class="full-menu">
-	<div class="fullmenu-content">
-		<ul class="page-menu">
-			<li><a class="active" href="index-2.html">Home</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Blog Posts</a></li>
-			<li><a href="">Contact</a></li>
-			<li><a href="#">Buy Now</a></li>
-			<li class="social">
-				<a href="#"><img src="icons/social/twitter.svg" alt=""></a>
-				<a href="#"><img src="icons/social/dribbble.svg" alt=""></a>
-				<a href="#"><img src="icons/social/instagram.svg" alt=""></a>
-				<a href="#"><img src="icons/social/send.svg" alt=""></a>
-			</li>
-		</ul>
-	</div>
-	<a href="#0" class="modal-close">Close</a>
-</div>
-<div class="cd-transition-layer"> 
-	<div class="bg-layer"></div>
-</div><!-- Ink Transition -->
-
-<div class="wrapper">
- 
-<section class="main">
-	<div class="main-content">
-        <span class="hello">Hello Everyone!</span>
-		<h1 class="main-title">I'm Adil Ahmed and Creative<br>
-		Interactive Developer & UX Designer.</h1>
-		<div class="social">
-			<a href="#"><img src="icons/social/twitter.svg" alt=""></a>
-			<a href="#"><img src="icons/social/instagram.svg" alt=""></a>
-			<a href="#"><img src="icons/social/dribbble.svg" alt=""></a>
-			<a href="#"><img src="icons/social/send.svg" alt=""></a>
-		</div>
-	</div>
-	 
-	 
-</section>
- 
- 
-<script src="jquery-2.1.4.min.js"></script>
- 
- <script>
- 'use strict'; 
-
-$(document).ready( function() {
- 
-	
-
-    var width = 100,
-        perfData = window.performance.timing, 
-        EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-        time = ((EstimatedTime/1000)%50) * 100
-
-
-    // Percentage Increment Animation
-    var PercentageID = $(".percentage"),
-            start = 0,
-            end = 100,
-            durataion = time;
-            animateValue(PercentageID, start, end, durataion);
-
-    function animateValue(id, start, end, duration) {
-
-        var range = end - start,
-          current = start,
-          increment = end > start? 1 : -1,
-          stepTime = Math.abs(Math.floor(duration / range)),
-          obj = $(id);
-
-
-        var timer = setInterval(function() {
-            current += increment;
-            $(obj).text(current);
-          //obj.innerHTML = current;
-            if (current == end) {
-                clearInterval(timer);
-            }
-        }, stepTime);
-    }
-    
-
-    
-	setTimeout(function(){
-        $('.preloader').fadeOut();
-        
-        $('.cd-transition-layer').addClass('closing').delay(1000).queue(function(){
-            $(this).removeClass("visible closing opening").dequeue();
-        });
-        
-	}, time);
-		
-    
-
-
-   // FADE OUT EFFECT WHEN CLICK A LINK
-    $(document).on("click", "a:not(.lightbox)", function () {
-        var newUrl = $(this).attr("href");
-        if (!newUrl || newUrl[0] === "#") {
-            location.hash = newUrl;
-            return;
-        }
-        $("html").fadeOut(function () {
-            location = newUrl;
-        });
-        return false;
-    });
-    
-
-    var paget = $(".page-title .title").text();
-
-    $( ".page-title").append("<span></span>");
-    $( ".page-title span").append(paget);
-
-
-    
-    //posts page hover 
-    $('.blog-post .blog-link').hover(function(){
-        $(this).parent('.content-outter').parent('.blog-post').toggleClass('mousef');
-        $(this).parent('.blog-post').toggleClass('mousef');
-    });
- 
-});  
-
-
-
-
-$(window).load( function() {
- 
-
-function smokeeffect () { 
-    var modalTrigger = $('.nav-icon'),
-        transitionLayer = $('.cd-transition-layer'),
-        transitionBackground = transitionLayer.children(),
-        modalWindow = $('.full-menu');
-
-    var frameProportion = 1.78, //png frame aspect ratio
-        frames = 25, //number of png frames
-        resize = false;
-
-    //set transitionBackground dimentions
-    setLayerDimensions();
-    $(window).on('resize', function(){
-        if( !resize ) {
-            resize = true;
-            (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
-        }
-    });
-
-    //open modal window
-    modalTrigger.on('click', function(event){   
-        event.preventDefault();
-        transitionLayer.addClass('visible opening');
-        var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
-        setTimeout(function(){
-            modalWindow.addClass('visible');
-        }, delay);
-    });
-
-    //close modal window
-    modalWindow.on('click', '.modal-close', function(event){
-        event.preventDefault();
-        transitionLayer.addClass('closing');
-        modalWindow.removeClass('visible');
-        transitionBackground.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
-            transitionLayer.removeClass('closing opening visible');
-            transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
-        });
-    });
-
-    function setLayerDimensions() {
-        var windowWidth = $(window).width(),
-            windowHeight = $(window).height(),
-            layerHeight, layerWidth;
-
-        if( windowWidth/windowHeight > frameProportion ) {
-            layerWidth = windowWidth;
-            layerHeight = layerWidth/frameProportion;
-        } else {
-            layerHeight = windowHeight*1.2;
-            layerWidth = layerHeight*frameProportion;
-        }
-
-        transitionBackground.css({
-            'width': layerWidth*frames+'px',
-            'height': layerHeight+'px',
-        });
-
-        resize = false;
-    }
-
-}
-smokeeffect()
-
- 
-    
-/*--------------------------------------------------
- Hero Section Height
----------------------------------------------------*/	
-     function homeh() {
-        var hometext = $('.main')
-
-        hometext.css({
-            "height": $(window).height() + "px"
-        });
-    }
-    homeh();
-    $(window).resize(homeh);
-
-
-    $( ".page-menu li:not(.social) a, .portfolio_filter ul li a").append( "<span></span>" );
-
-    $('.nav-icon').on("click", function(){
-            $(this).toggleClass('modal-close');
-    });
- 
-     
-}); // document load end 
-
-
-
-
-  
-</script>
-
-    </div>  
-    </body>
+	   </style>
+   </head>
+   <body>
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Feedback</a></li>
+         </ul>
+      </div>
+      <div class="content">
+         <div class="title">
+            Fullscreen Overlay Navigation Bar
+         </div>
+         <p>
+            using only HTML & CSS
+         </p>
+      </div>
+   </body>
 </html>
-](url)
