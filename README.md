@@ -130,12 +130,8 @@ input[type="checkbox"]{
       </div>
       <div class="content">
          <div class="title">
-            Fullscreen Overlay Navigation Bar
+		<img src="2w2otnhwuck11.gif">
          </div>
-         <p>
-            using only HTML & CSS
-         </p>
       </div>
    </body>
-	![2w2otnhwuck11](https://user-images.githubusercontent.com/107403546/176995313-f20ecaf8-1727-4f5f-ad0f-4a0e08dfb258.gif)
 </html>
