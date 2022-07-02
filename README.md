@@ -89,7 +89,7 @@
   transform: scaleY(1);
 }
 .wrapper ul li a:hover{
-  color: #4158d0;
+  color: black;
 }
 input[type="checkbox"]{
   display: none;
