@@ -14,14 +14,7 @@
   font-family: 'Poppins', sans-serif;
   max-height: 100vh;
 }
-		   
-img{
-  width: 300px;
-  position:absolute;
-  right:0;
-  bottom:0;
-}
-		   
+		   	   
 .wrapper{
   position: fixed;
   top: 0;
@@ -117,11 +110,11 @@ input[type="checkbox"]{
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Feedback</a></li>
          </ul>
-	 <img src="black-cat.gif" style="background:black;">
+	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;z-index:1;">
       </div>
       <div class="content">
          <div class="title">
-		<img src="2w2otnhwuck11.gif">
+		<img src="2w2otnhwuck11.gif" style="z-index:0; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
       </div>
    </body>
