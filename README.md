@@ -45,8 +45,8 @@
 }
 #active:checked ~ .menu-btn{
   background: black;
-  color: #4158d0;
-  border:white;
+  color: white;
+  border:1px solid white;
 }
 #active:checked ~ .menu-btn i:before{
   content: "\f00d";
