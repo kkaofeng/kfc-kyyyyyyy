@@ -232,10 +232,15 @@ button.learn-more:active::before {
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
-	      <button class="learn-more">Muacksss</button>
+	      <button onclick="audiio.play();" class="learn-more">Muacksss</button>
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
       </div>
+	   
+	   <script type="text/javascript">
+		   const audio = new Audio();
+		   audio.src = "papong.mp3";
+	   </script>
    </body>
 </html>
