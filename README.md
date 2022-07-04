@@ -183,11 +183,11 @@ button.muacks:active::before {
       </div>
 	   
 	   <script type="text/javascript">
-		   const papong = new Audio1();
-		   audio1.src = "papong.mp3";
+		   const papong = new Audio();
+		   papong.src = "papong.mp3";
 		   
-		   const muncha = new Audio2();
-		   audio2.src = "munchapompom.mp3";
+		   const muncha = new Audio();
+		   muncha.src = "munchapompom.mp3";
 	   </script>
    </body>
 </html>
