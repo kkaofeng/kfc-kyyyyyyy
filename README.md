@@ -25,6 +25,7 @@
   background: black;
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
+  cursor: url(black-cat.gif);
 }
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
