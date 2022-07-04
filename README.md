@@ -171,7 +171,7 @@ button {
   font-family: inherit;
 }
 
-button.learn-more {
+button.muacks {
   padding: 1.25em 2em;
   border: 2px solid #b18597;
   border-radius: 0.75em;
@@ -183,7 +183,7 @@ button.learn-more {
   transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
-button.learn-more::before {
+button.muacks::before {
   content: '';
   position: absolute;
   top: 0;
@@ -199,22 +199,22 @@ button.learn-more::before {
   transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
-button.learn-more:hover {
+button.muacks:hover {
   background: #ffe9e9;
   transform: translate(0, .25em);
 }
 
-button.learn-more:hover::before {
+button.muacks:hover::before {
   box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
   transform: translate3d(0, .5em, -1em);
 }
 
-button.learn-more:active {
+button.muacks:active {
   background: #ffe9e9;
   transform: translate(0, .75em);
 }
 
-button.learn-more:active::before {
+button.muacks:active::before {
   box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
 }
@@ -232,7 +232,7 @@ button.learn-more:active::before {
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
-	      <button onclick="audio.play();" class="learn-more">Muacksss</button>
+	      <button onclick="audio.play();" class="muacks">Muacksss</button>
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
