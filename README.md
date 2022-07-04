@@ -166,7 +166,7 @@ button.muacks:active::before {
    </head>
    <body>
       <input type="checkbox" id="active">
-      <label for="active" onclick="audio.play();" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <label for="active" onclick="audio2.play();" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
          <ul>
             <li><a href="#">Home</a></li>
@@ -176,15 +176,18 @@ button.muacks:active::before {
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
-	      <button onclick="audio.play();" class="muacks">Muacksss</button>
+	      <button onclick="audio1.play();" class="muacks">Muacksss</button>
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
       </div>
 	   
 	   <script type="text/javascript">
-		   const audio = new Audio();
-		   audio.src = "papong.mp3";
+		   const papong = new Audio();
+		   audio1.src = "papong.mp3";
+		   
+		   const muncha = new Audio();
+		   audio2.src = "munchapompom.mp3";
 	   </script>
    </body>
 </html>
