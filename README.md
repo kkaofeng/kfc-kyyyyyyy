@@ -13,7 +13,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   max-height: 100vh;
-  cursor: url(black-cat.gif);
+  cursor: url(black-cat.gif), auto;
 }
 		   	   
 .wrapper{
@@ -25,7 +25,7 @@
   background: black;
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
-  cursor: url(black-cat.gif);
+  cursor: url(black-cat.gif), auto;
 }
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
