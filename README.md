@@ -7,6 +7,7 @@
 	   
 	   <style>
 		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+		   @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 *{
   margin: 0;
   padding: 0;
@@ -98,7 +99,125 @@
 input[type="checkbox"]{
   display: none;
 }
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
 
+button.learn-more {
+  padding: 1.25em 2em;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  font-weight: 700;
+  color: #382b22;
+  text-transform: uppercase;
+  background: #fff0f0;
+  transform-style: preserve-3d;
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.learn-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #f9c4d2;
+  box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
+  transform: translate3d(0, .75em, -1em);
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.learn-more:hover {
+  background: #ffe9e9;
+  transform: translate(0, .25em);
+}
+
+button.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
+  transform: translate3d(0, .5em, -1em);
+}
+
+button.learn-more:active {
+  background: #ffe9e9;
+  transform: translate(0, .75em);
+}
+
+button.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  padding: 1.25em 2em;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  font-weight: 700;
+  color: #382b22;
+  text-transform: uppercase;
+  background: #fff0f0;
+  transform-style: preserve-3d;
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.learn-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #f9c4d2;
+  box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
+  transform: translate3d(0, .75em, -1em);
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.learn-more:hover {
+  background: #ffe9e9;
+  transform: translate(0, .25em);
+}
+
+button.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
+  transform: translate3d(0, .5em, -1em);
+}
+
+button.learn-more:active {
+  background: #ffe9e9;
+  transform: translate(0, .75em);
+}
+
+button.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
 </style>
    </head>
    <body>
@@ -113,6 +232,7 @@ input[type="checkbox"]{
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
+	      <button class="learn-more">Muacksss</button>
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
