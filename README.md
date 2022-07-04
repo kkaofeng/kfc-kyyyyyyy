@@ -122,6 +122,7 @@ button.muacks {
   background: #fff0f0;
   transform-style: preserve-3d;
   transition: .15s cubic-bezier(0, 0, .6, 1);
+  z-index:-1;
 }
 
 button.muacks::before {
