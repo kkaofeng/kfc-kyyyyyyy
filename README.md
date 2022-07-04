@@ -27,6 +27,7 @@
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
   cursor: url(black-cat.gif), auto;
+  z-index:1;
 }
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
@@ -87,7 +88,7 @@
   left: 0;
   border-radius: 50px;
   transform: scaleY(0);
-  z-index: -1;
+  z-index: 0;
   transition: transform 0.3s ease;
 }
 .wrapper ul li a:hover:after{
@@ -122,7 +123,7 @@ button.muacks {
   background: #fff0f0;
   transform-style: preserve-3d;
   transition: .15s cubic-bezier(0, 0, .6, 1);
-  z-index:-1;
+  z-index:0;
 }
 
 button.muacks::before {
@@ -139,7 +140,6 @@ button.muacks::before {
   box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
   transform: translate3d(0, .75em, -1em);
   transition: .15s cubic-bezier(0, 0, .6, 1);
-  z-index:-1;
 }
 
 button.muacks:hover {
