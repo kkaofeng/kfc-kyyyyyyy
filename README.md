@@ -139,6 +139,7 @@ button.muacks::before {
   box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
   transform: translate3d(0, .75em, -1em);
   transition: .15s cubic-bezier(0, 0, .6, 1);
+  z-index:-1;
 }
 
 button.muacks:hover {
