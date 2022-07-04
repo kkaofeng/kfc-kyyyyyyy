@@ -166,7 +166,7 @@ button.muacks:active::before {
    </head>
    <body>
       <input type="checkbox" id="active">
-      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <label for="active" onclick="audio.play();" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
          <ul>
             <li><a href="#">Home</a></li>
