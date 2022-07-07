@@ -4,7 +4,7 @@
       <title>Fullscreen Overlay Navigation | CodingNepal</title>
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	   
+      <link rel="stylesheet" href="eye-style.css">
 	   <style>
 		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 		   @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
@@ -180,6 +180,15 @@ button.muacks:active::before {
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
+	 <div class="eyes">
+            <div class="eye">
+                <div class="ball"></div>
+            </div>
+            <div class="eye">
+                <div class="ball"></div>
+                <iv>
+            </div>
+        </div>
       </div>
 	   
 	   <script type="text/javascript">
@@ -188,6 +197,18 @@ button.muacks:active::before {
 		   
 		   const muncha = new Audio();
 		   muncha.src = "munchapompom.mp3";
+		   
+		   var ball = document.getElementsByClassName("ball");
+              	   document.onmousemove = function() {
+                   var x = event.clientX * 100 / window.innerWidth + "%";
+                   var y = event.clientY * 70 / window.innerHeight + "%";
+
+                for (var i = 0; i < 2; i++) {
+                    ball[i].style.left = x / 2;
+                    ball[i].style.top = y / 2;
+                    ball[i].style.transform = "translate(" + x + "," + y + ")";
+                }
+            }
 	   </script>
    </body>
 </html>
