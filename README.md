@@ -16,7 +16,16 @@
   max-height: 100vh;
   cursor: url(black-cat.gif), auto;
 }
-		   	   
+
+.body {
+    background: #ffffff url(Minions-body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 348px;
+    height: 553.7px;
+    margin-top: 90px;
+}
+		   
 .wrapper{
   position: fixed;
   top: 0;
