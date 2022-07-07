@@ -195,10 +195,9 @@ button.muacks:active::before {
             </div>
             <div class="eye">
                 <div class="ball"></div>
-                <iv>
+                </div>
             </div>
         </div>
-      </div>
 
 	   <script type="text/javascript">
 		   const papong = new Audio();
