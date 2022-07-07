@@ -176,6 +176,7 @@ button.muacks:active::before {
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
+      <img src="Minions-body/png">
 	      <button onclick="papong.play();" class="muacks">Muacksss</button>
          <div class="title">
 		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
@@ -190,7 +191,7 @@ button.muacks:active::before {
             </div>
         </div>
       </div>
-	   
+
 	   <script type="text/javascript">
 		   const papong = new Audio();
 		   papong.src = "papong.mp3";
