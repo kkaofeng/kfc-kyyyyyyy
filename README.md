@@ -231,8 +231,9 @@ button.muacks:active::before {
                     ball[i].style.transform = "translate(" + x + "," + y + ")";
                 }
             }
+	    </script>
 	    
-	    
+	    <script type="text/javascript">
 	    const deg = 6;
 	    const hr = document.querySelector('#hr');
 	    const mn = document.querySelector('#mn');
