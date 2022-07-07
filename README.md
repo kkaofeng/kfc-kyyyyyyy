@@ -5,6 +5,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <link rel="stylesheet" href="eye-style.css">
+      <link rel="stylesheet" href="clock.css">
 	   <style>
 		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 		   @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
@@ -184,6 +185,19 @@ button.muacks:active::before {
          </ul>
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
+      
+      <div class="clock">
+      <div class="hour">
+      <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+      <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+      <div class="sc" id="sc"></div>
+      </div>
+      
+      
       <div class="content">
 	      <button onclick="papong.play();" class="muacks">Muacksss</button>
          <div class="title">
