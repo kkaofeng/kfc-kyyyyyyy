@@ -9,14 +9,6 @@
 	   <style>
 		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 		   @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  max-height: 100vh;
-  cursor: url(black-cat.gif), auto;
-}
 		   
 .wrapper{
   position: fixed;
