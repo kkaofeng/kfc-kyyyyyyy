@@ -3,7 +3,9 @@
       <meta charset="utf-8">
       <title>Fullscreen Overlay Navigation | CodingNepal</title>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="cube.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      
 	   <style>
 		   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 		   @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
