@@ -1,7 +1,6 @@
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
    <head>
       <meta charset="utf-8">
-      <title>Fullscreen Overlay Navigation | CodingNepal</title>
       <link rel="stylesheet" href="buttonDadong.css">
       <link rel="stylesheet" href="menu.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
