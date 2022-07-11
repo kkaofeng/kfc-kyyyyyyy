@@ -105,7 +105,7 @@ button {
   font-family: inherit;
 }
 
-button.muacks {
+button.dadong {
   padding: 1.25em 2em;
   border: 2px solid #b18597;
   border-radius: 0.75em;
@@ -118,7 +118,7 @@ button.muacks {
   z-index:0;
 }
 
-button.muacks::before {
+button.dadong::before {
   content: '';
   position: absolute;
   top: 0;
@@ -134,22 +134,22 @@ button.muacks::before {
   transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
-button.muacks:hover {
+button.dadong:hover {
   background: #ffe9e9;
   transform: translate(0, .25em);
 }
 
-button.muacks:hover::before {
+button.dadong:hover::before {
   box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
   transform: translate3d(0, .5em, -1em);
 }
 
-button.muacks:active {
+button.dadong:active {
   background: #ffe9e9;
   transform: translate(0, .75em);
 }
 
-button.muacks:active::before {
+button.dadong:active::before {
   box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
 }
@@ -168,15 +168,15 @@ button.muacks:active::before {
 	 <img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
       </div>
       <div class="content">
-	      <button onclick="papong.play();" class="muacks">Muacksss</button>
+	      <button onclick="dadong.play();" class="dadong">DaDong~</button>
          <div class="title">
-		<img src="2w2otnhwuck11.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
+		<img src="black-cat.gif" style="z-index:-1; width: 300px;position:absolute;right:0; bottom:0;">
          </div>
 	</div>
 
 	   <script type="text/javascript">
-		   const papong = new Audio();
-		   papong.src = "papong.mp3";
+		   const dadong = new Audio();
+		   dadong.src = "dadong.mp3";
 		   
 		   const muncha = new Audio();
 		   muncha.src = "munchapompom.mp3";
