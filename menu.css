@@ -44,41 +44,9 @@
   height: 100%;
   border-radius: inherit;
   background: #f9c4d2;
-  box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
-  transform: translate3d(0, .75em, -1em);
-  transition: .15s cubic-bezier(0, 0, .6, 1);
+
 }
 
-
-.menu-btn:hover {
-  background: #ffe9e9;
-  transform: translate(0, .25em);
-}
-
-.menu-btn:hover::before {
-  box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
-  transform: translate3d(0, .5em, -1em);
-}
-
-.menu-btn:active {
-  background: #ffe9e9;
-  transform: translate(0, .75em);
-}
-
-.menu-btn:active::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
-}
-
-#active:checked ~ .menu-btn{
-  background: black;
-  color: white;
-  border:1px solid white;
-}
-		   
-#active:checked ~ .menu-btn i:before{
-  content: "\f00d";
-}
 		   
 .wrapper ul{
   position: absolute;
