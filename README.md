@@ -170,7 +170,7 @@ button.dadong:active::before {
       <div class="content">
 	      <button onclick="dadong.play();" class="dadong">DaDong~</button>
          <div class="title">
-		<img src="black-cat.gif" style="position:absolute;background:black;width:185px;right:77px;bottom:92px;">
+		<img src="black-cat.gif" style="position:absolute;background:white;width:185px;right:77px;bottom:92px;">
          </div>
 	</div>
 
