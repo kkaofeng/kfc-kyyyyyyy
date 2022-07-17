@@ -5,21 +5,22 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .wrapper{
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  background: black;
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
 }
+
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
 }
+
 .menu-btn{
   position: absolute;
   z-index: 2;
@@ -34,17 +35,19 @@
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  background: black;
   transition: all 0.3s ease-in-out;
 }
+
 #active:checked ~ .menu-btn{
   background: #fff;
   color: #4158d0;
 }
+
 #active:checked ~ .menu-btn i:before{
   content: "\f00d";
 }
+
 .wrapper ul{
   position: absolute;
   top: 50%;
@@ -53,9 +56,11 @@
   list-style: none;
   text-align: center;
 }
+
 .wrapper ul li{
   margin: 15px 0;
 }
+
 .wrapper ul li a{
   color: none;
   text-decoration: none;
@@ -67,6 +72,7 @@
   line-height: 50px;
   transition: all 0.3s ease;
 }
+
 .wrapper ul li a:after{
   position: absolute;
   content: "";
@@ -79,15 +85,19 @@
   z-index: -1;
   transition: transform 0.3s ease;
 }
+
 .wrapper ul li a:hover:after{
   transform: scaleY(1);
 }
+
 .wrapper ul li a:hover{
   color: #4158d0;
 }
+
 input[type="checkbox"]{
   display: none;
 }
+
 .content{
   position: absolute;
   top: 50%;
@@ -98,10 +108,12 @@ input[type="checkbox"]{
   width: 100%;
   color: #202020;
 }
+
 .content .title{
   font-size: 40px;
   font-weight: 700;
 }
+
 .content p{
   font-size: 35px;
   font-weight: 600;
