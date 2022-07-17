@@ -15,7 +15,7 @@
       <label for="active" onclick="muncha.play();" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
          <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="README.md">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
          </ul>
