@@ -18,7 +18,7 @@
       </div>
       <div class="content">
          <div class="title">
-            Fullscreen Overlay Navigation Bar
+<img src="blackcat.jpg">
          </div>
          <p>
             using only HTML & CSS
