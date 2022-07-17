@@ -18,11 +18,8 @@
       </div>
       <div class="content">
          <div class="title">
-<img src="blackcat.jpg">
+<img src="black-cat.gif">
          </div>
-         <p>
-            using only HTML & CSS
-         </p>
       </div>
    </body>
 </html>
