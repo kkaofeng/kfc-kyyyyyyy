@@ -12,7 +12,7 @@
    </head>
    <body>
       <input type="checkbox" id="active">
-      <button for="active" onclick="muncha.play();" class="menu-btn"><i class="fas fa-bars"></i></button>
+      <label for="active" onclick="muncha.play();" class="menu-btn"><i class="fas fa-bars"></i></label>
       <div class="wrapper">
          <ul>
             <li><a href="#">Home</a></li>
